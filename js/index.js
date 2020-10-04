@@ -22,7 +22,7 @@ var number = 1;
 var string = 'This is a string';
 string.indexOf('o');
 string.length;
-string.substr(0, 2);
+string.substr(0, 2); // 0 = starting point   2 = how many letters to take
 
 var bool = true; // or false
 var int = 10;
@@ -78,9 +78,9 @@ if (logging == true) {
 
 if (alerting == true) {
   var alertThisValue = 'Type this into console';
-  console.log('This');
-  console.log(1);
-  console.log(alertThisValue);
+  alert('This');
+  alert(1);
+  alert(alertThisValue);
 }
 
 /**

@@ -70,7 +70,12 @@ var people = [
     isWearingMask: true,
   },
 ];
-console.log(people);
+// console.log(people);
+
+function getFullName(person) {
+  var fullName = person.first_name + ' ' + person.last_name;
+  return fullName;
+}
 
 for (var i = 0; i < people.length; i++) {
   // console.log(people[i]);
@@ -88,21 +93,20 @@ while (i < people.length) {
 
 var adults = [];
 for (var person of people) {
+  // console.log(getFullName(person));
   if (person.age >= 21) {
-    adults.push(person.first_name + ' ' + person.last_name + ' ' + person.age);
+    adults.push(getFullName(person) + ' ' + person.age);
   }
 }
-// console.log(adults)
+// console.log(adults);
 
 var female = [];
 var male = [];
 for (var person of people) {
   if (person.gender === 'Male') {
-    male.push(
-      person.first_name + ' ' + person.last_name + ' is ' + person.gender
-    );
+    male.push(getFullName(person) + ' is ' + person.gender);
   } else {
-    female.push(person.first_name + ' ' + person.last_name + ' is Female');
+    female.push(getFullName(person) + ' is Female');
   }
 }
 // console.log(male);
@@ -124,27 +128,32 @@ for (person of people) {
 // console.log(didNot);
 // console.log('Did not get in');
 
+function getFirstLetterOfName(person) {
+  var firstLetterOfName = person.first_name.substring(0, 1);
+  return firstLetterOfName;
+}
+
 for (var person of people) {
-  var conditional1 = person.first_name.substring(0, 1);
+  var conditional1 = getFirstLetterOfName(person);
   var conditional2 = person.first_name[0];
   switch (conditional1) {
     case 'C':
-      alert(person.first_name + ' name starts with a C');
+      // alert(person.first_name + ' name starts with a C');
       break;
     case 'G':
-      alert(person.first_name + ' name started with a G');
+      // alert(person.first_name + ' name started with a G');
       break;
     case 'F':
-      alert(person.first_name + ' name started with a F');
+      // alert(person.first_name + ' name started with a F');
       break;
     case 'L':
-      alert(person.first_name + ' name started with a L');
+      // alert(person.first_name + ' name started with a L');
       break;
     case 'X':
-      alert(person.first_name + ' name started with a X');
+      // alert(person.first_name + ' name started with a X');
       break;
     case 'W':
-      alert(person.first_name + ' name started with a W');
+      // alert(person.first_name + ' name started with a W');
       break;
     default:
       break;
@@ -169,3 +178,48 @@ for (var person of people) {
  *
  *
  *  */
+
+var loopArray = ['This', 'is', 'just', 'some', 'text', 'separated'];
+console.log(loopArray);
+
+var number = 10;
+var stringLength = 'ThisIsAstring'.length;
+function return10() {
+  return 10;
+}
+//       X          Y        Z
+for (var i = 0; i < number; i++) {
+  // console.log('Currently on loop ' + i);
+}
+
+var i = 0; // X
+while (i < number) {
+  // Y
+  // console.log('Currently on loop ' + i);
+  i++; // Z
+}
+
+for (var text of loopArray) {
+  // console.log(text);
+}
+
+for (var text in loopArray) {
+  // console.log(text);
+}
+
+// Create a function that loops over n times;
+// Write out some message alongside loop number
+var obj = {
+  message: 'Hi again',
+};
+// console.log(obj);
+obj.message = 'Hi a third time';
+obj.model = 'Fiesta';
+// console.log(obj);
+
+function loopingFunction(n, text) {
+  for (var i = 1; i <= n; i++) {
+    console.log(obj.message + ' ' + i);
+  }
+}
+// loopingFunction(5, 'Hello');
