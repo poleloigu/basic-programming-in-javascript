@@ -124,8 +124,32 @@ for (person of people) {
 // console.log(didNot);
 // console.log('Did not get in');
 
-// Check if persons firstname is one of these C, G, F, L, X or W     (use switch and substring)
-// if it is then alert/console and give the letter for which they were not admitted.
+for (var person of people) {
+  var conditional1 = person.first_name.substring(0, 1);
+  var conditional2 = person.first_name[0];
+  switch (conditional1) {
+    case 'C':
+      alert(person.first_name + ' name starts with a C');
+      break;
+    case 'G':
+      alert(person.first_name + ' name started with a G');
+      break;
+    case 'F':
+      alert(person.first_name + ' name started with a F');
+      break;
+    case 'L':
+      alert(person.first_name + ' name started with a L');
+      break;
+    case 'X':
+      alert(person.first_name + ' name started with a X');
+      break;
+    case 'W':
+      alert(person.first_name + ' name started with a W');
+      break;
+    default:
+      break;
+  }
+}
 
 /**
  * This is an array of objects of people who would like to go to an event.
