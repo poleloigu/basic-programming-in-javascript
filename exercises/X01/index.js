@@ -81,11 +81,13 @@ console.log(people);
  * #1 The event they would like to go to is an 21+ event.
  * So everyone aged less than 21 cannot get inside.
  *
- * #2 Print out all males or females that went to the 21+ event.
+ * #2 Print out all males or females that tried to go to the event as a string.
+ * Use a while loop
  *
  * #3 For current safety reasons we must randomly give every person a 50% chance of getting in.
+ * The 21+ restrictions no longer apply.
  *
- * #4 If a persons first or last name starts with C, G, F, L, X or W they sadly cannot come in to the event.
+ * #4 If a persons first name starts with C, G, F, L, X or W they sadly cannot come in to the event.
  * Write the alert/console message for which letter they cannot be admitted for.
  *
  *
