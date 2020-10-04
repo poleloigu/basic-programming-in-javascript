@@ -1,4 +1,14 @@
 /**
+ *  Adding javascript to your index.html
+ */
+
+/* <script>
+
+</script> */
+
+/* <script src="./filename.js"></script> */
+
+/**
  * Setting variables;
  */
 var x; // If you were to console log this out it would give undefined.
@@ -10,7 +20,19 @@ x = 2;
  */
 var number = 1;
 var string = 'This is a string';
+string.indexOf('o');
+string.length;
+string.substr(0, 2);
 
+var bool = true; // or false
+var int = 10;
+var float = 10.55;
+var nothing = null;
+var notaNumber = NaN;
+
+/**
+ * Array
+ */
 // Array is always ordered. Starts from index 0, so getting number 1 would be array[0] and getting 'Hello' would be array[2]
 var array = [1, 2, 'Hello'];
 // Array methods
@@ -20,7 +42,9 @@ array.pop(); // [0, 2, 'Hello']
 var x = array[2]; // console.log(x) would give us 'Hello'
 array.length; // Will give us length of array in this case 3 (Very useful in for loops over arrays)
 
-// Object
+/**
+ * Object
+ */
 // called key: value pairs;
 var obj = {
   name: 'Hello',
@@ -41,6 +65,10 @@ obj.saySomething(); // 'saying something'
 var logging = false; // Change this to true if you want to see logging in action
 var alerting = false; // Change this to true if you want to see alerting in action
 
+// These are extracurricular
+// var person = prompt("Please enter your name", "Harry Potter");
+// window.print('Hello');
+
 if (logging == true) {
   var logThisValue = 'Type this into console';
   console.log('This');
@@ -56,8 +84,20 @@ if (alerting == true) {
 }
 
 /**
+ * Incrementation and decrementation
+ */
+
+var a;
+a++; // incremenent
+a--; // decrement
+
+/**
  * Functions
  */
+
+function randomFunction() {
+  // Anything inside these {} will be tied to that function
+}
 
 function function1(parameter1, parameter2) {
   var result = parameter1 + parameter2; // Operations inside the function
@@ -66,8 +106,8 @@ function function1(parameter1, parameter2) {
 
 function function2(parameter1, parameter2) {
   var result = parameter1 + parameter2; // Operations inside the function
-
   //   alert(result);
+
   // This function does not have a return because we only use it to alert the given sum that we get.
 }
 
@@ -102,6 +142,14 @@ while (i < number_there) {
   // if i reaches number_there then loop will break
 }
 
+var arr = [1, 2, 3, 4, 5];
+for (var i of arr) {
+  console.log(i); // Gives element
+}
+for (var i in arr) {
+  console.log(i); // Gives index
+}
+
 /**
  * Conditionals
  */
@@ -133,4 +181,21 @@ if (value1 > value2) {
   // operations is the line above is true
 } else {
   // operations if false
+}
+
+/**
+ * Switch
+ */
+
+myAge = 0;
+switch (myAge) {
+  case 15:
+    alert('youre 15');
+    break;
+  case 20:
+    alert('youre 20');
+    break;
+  default:
+    // alert('Did not get your age');
+    break;
 }
